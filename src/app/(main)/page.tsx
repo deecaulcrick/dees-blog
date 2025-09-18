@@ -25,7 +25,7 @@ export default function Home() {
           <div>
             <h2 className="text-theme-orange font-medium text-lg my-10">Notes</h2>
             <div>
-              <IconArrowBullet size={20} isBooped={true} />
+
             </div>
           </div>
         </div>
