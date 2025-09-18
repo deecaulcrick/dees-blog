@@ -2,18 +2,17 @@
 title: A Lazy Computer Science Student's Guide To Building An Adding Machine
 excerpt: I'm alive and in the end, that's what counts.
 date: February 10, 2024
-tags:
-  - Computer Science
+tag: Computer Science
 coverImage: "adding-machine.png"
 ---
 
 I've been engrossed in reading **[Code - The Hidden Language of Computer Hardware and Software by Charles Petzold](https://www.goodreads.com/en/book/show/44882)** for the past few days. Recently, I stumbled upon a chapter that finally clarified what my CSC 313 (Introduction to Design of Digital Systems) lecturer has been attempting to convey for a little over three months – how computers work. It was an ‘aha!’ moment for me, and now I'm excited to share with you what I've learned. I'll show you how to construct an Adding Machine – a fundamental model of computation. However, we won't be building a physical one (mostly because I can't afford it). Instead, we'll create it in our minds and on paper. Let's delve into it.
 
-Disclaimer: The adding machine we're about to construct may seem rudimentary (think 1800s technology), as we're just starting to unravel these concepts and it will only be capable of adding 8-bit binary numbers.
+<BookRef title="Code - The Hidden Language of Computer Hardware and Software" author="Charles Petzold" link="https://www.goodreads.com/en/book/show/44882" src="/images/books/code.jpeg" description="What do flashlights, the British invasion, black cats, and seesaws have to do with computers? In CODE, they show us the ingenious ways we manipulate language and invent new means of communicating with each other. And through CODE, we see how this ingenuity and our very human compulsion to communicate have driven the technological innovations of the past two centuries."/>
 
-> ### Prerequisites
->
-> To follow along with this tutorial, it's important to have a basic understanding of binary numbers (what they represent and their significance in computing) and logic gates.
+<Callout type='disclaimer' heading="Disclaimer" text="The adding machine we're about to construct may seem rudimentary (think 1800s technology), as we're just starting to unravel these concepts and it will only be capable of adding 8-bit binary numbers."/>
+
+<Callout type='audience' heading="Intended audience" text="To follow along with this tutorial, it's important to have a basic understanding of binary numbers (what they represent and their significance in computing) and logic gates."/>
 
 ## Binary Numbers
 
@@ -30,27 +29,31 @@ Logic gates lay the groundwork for digital electronics and are used to process a
 
 1. **AND Gate:** An AND gate produces a HIGH (1) output only when all of its inputs are HIGH (1). Otherwise, it produces a LOW (0) output. The symbol for an AND gate is typically represented by the word "AND" or by the ∧ symbol.
 
-![AND Gate](/images/adding-machine/1.png)
+<BlogImage src="/images/adding-machine/1.png" alt="AND Gate" type="diagram" />
+
 
 2. **OR Gate:** An OR gate produces a HIGH (1) output if at least one of its inputs is HIGH (1). It produces a LOW (0) output only when all of its inputs are LOW (0). The symbol for an OR gate is typically represented by the word "OR" or by the ∨ symbol.
 
-![OR Gate](/images/adding-machine/2.png)
+<BlogImage src="/images/adding-machine/2.png" alt="OR Gate" type="diagram" />
 
 3. **NOT Gate (Inverter):** A NOT gate, also known as an inverter, produces an output that is the opposite (complement) of its input. If the input is HIGH (1), the output is LOW (0), and vice versa. The symbol for a NOT gate is typically represented by the word "NOT" or by a triangle with a small circle at its input.
 
-![NOT Gate](/images/adding-machine/4.png)
+<BlogImage src="/images/adding-machine/4.png" alt="NOT Gate" type="diagram" />
+
 
 4. **XOR Gate (Exclusive OR):** An XOR gate produces a HIGH (1) output if the number of HIGH (1) inputs is odd. Otherwise, it produces a LOW (0) output. The symbol for an XOR gate is typically represented by the word "XOR" or by the ⊕ symbol.
 
-![XOR Gate](/images/adding-machine/3.png)
+<BlogImage src="/images/adding-machine/3.png" alt="XOR Gate" type="diagram" />
 
 5. **NAND Gate:** A NAND gate is the complement of an AND gate. It produces a LOW (0) output only when all of its inputs are HIGH (1), and it produces a HIGH (1) output otherwise. The symbol for a NAND gate is typically represented by the word "NAND" or by a combination of AND gate and NOT gate symbols.
 
-![NAND Gate](/images/adding-machine/5.png)
+<BlogImage src="/images/adding-machine/5.png" alt="NAND Gate" type="diagram" />
+
 
 6. **NOR Gate:** A NOR gate is the complement of an OR gate. It produces a LOW (0) output if at least one of its inputs is HIGH (1), and it produces a HIGH (1) output only when all of its inputs are LOW (0). The symbol for a NOR gate is typically represented by the word "NOR" or by a combination of OR gate and NOT gate symbols.
 
-![NOR Gate](/images/adding-machine/6.png)
+<BlogImage src="/images/adding-machine/6.png" alt="NOR Gate" type="diagram" />
+
 
 These logic gates are going to be combined in various ways to create more complex digital circuits, which are going to allow us to perform some arithmetic. But first, let’s figure out how binary addition works.
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import getPostMetaData from "@/lib/mdx";
+import { getPostMetaData } from "@/lib/mdx";
 
 function PostList() {
     const postMetaData = getPostMetaData();
@@ -8,13 +8,13 @@ function PostList() {
         <div className="post-grid">
             {postMetaData.map((post) => (
                 <div key={post.slug} className="post-card mb-6">
-                    <h2 className="font-bold text-2xl tracking-tighter mb-4 hover:underline ">
+                    <h2 className="font-medium text-2xl tracking-tighter mb-4 hover:underline hover:decoration-theme-pink">
                         <Link href={`/posts/${post.slug}`} className="post-card-title">
                             {post.title}
                         </Link>
                     </h2>
-                    <p className="mb-6">{post.excerpt}</p>
-
+                    <p className="mb-6">{post.subheading}</p>
+                    <p>{post.excerpt}</p>
                     <Link href={`/posts/${post.slug}`} className="font-bold">
                         Read more
                     </Link>

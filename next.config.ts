@@ -1,4 +1,6 @@
 import createMDX from '@next/mdx'
+import rehypeSlug from 'rehype-slug'
+// import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,10 +12,10 @@ const nextConfig = {
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
   options: {
-    providerImportSource: "@/mdx-conponents",
-
+    providerImportSource: "@mdx-js/react",
   },
 })
 
 // Merge MDX config with Next.js config
 export default withMDX(nextConfig)
+
