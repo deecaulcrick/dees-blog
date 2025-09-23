@@ -6,6 +6,7 @@ import CodeBlock from '@/components/ui/CodeBlock'
 import Callout from '@/components/ui/Callout'
 import BlogImage from './components/ui/BlogImage'
 import BookRef from './components/ui/BookRef'
+import SideNote from './components/ui/SideNote'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -130,6 +131,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     CodeBlock,
     BlogImage,
     BookRef,
+    SideNote,
 
     // You can add more custom components here
     ...components,
