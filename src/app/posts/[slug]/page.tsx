@@ -2,10 +2,11 @@ import fs from "fs";
 import path from "path";
 import BlogPost from "@/components/BlogPost";
 import matter from "gray-matter";
-import {getPostMetaData} from "@/lib/mdx";
+import { getPostMetaData } from "@/lib/mdx";
 import Header from "@/components/Header";
 import TableOfContents from "@/components/TableOfContents";
 import ShapeDivider from "@/components/ui/ShapeDivider";
+import Splash from "@/components/shape-dividers/Splash";
 
 const getPostContent = (slug: string) => {
     const folder = path.join(process.cwd(), "src/content/blog/");
@@ -36,8 +37,8 @@ const singlePost = async (props: SinglePostProps) => {
             {/* <div className=" header w-full">
       </div> */}
             <div className="w-full flex flex-col justify-center items-center">
-                <div className="post-header h-auto w-full flex flex-col items-center">
-                    <div className="container px-8 md:px-15 lg:px-30">
+                <div className="bg-theme-green dark:bg-theme-teal h-auto w-full flex flex-col items-center">
+                    <div className="container pb-10 px-8 md:px-15 lg:px-30">
                         <Header />
                         <div className="w-[80%] mt-20">
                             <h1 className="h1">{postContent.data.title}</h1>
@@ -47,15 +48,22 @@ const singlePost = async (props: SinglePostProps) => {
                         </div>
                     </div>
 
+
                 </div>
-                <div className="container">
-                    <div className="flex flex-col md:flex-row gap-10 md:gap-40 px-8 md:px-10 lg:px-20">
-                        <div className="w-full md:w-[70%]">
-                            <BlogPost content={postContent.content} />
-                        </div>
-                        <div>
-                            Latest
-                            <TableOfContents content={postContent.content} className="sticky top-20" />
+                <div className="w-full ">
+                    <div className="w-full">
+                        <Splash />
+                    </div>
+                    <div className=" flex justify-center items-center">
+                        <div className="container">
+                            <div className="flex flex-col md:flex-row gap-10 md:gap-40 px-8 md:px-10 lg:px-20">
+                                <div className="w-full md:w-[70%]">
+                                    <BlogPost content={postContent.content} />
+                                </div>
+                                <div>
+                                    <TableOfContents content={postContent.content} className="sticky top-20 hidden md:block" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -8,12 +8,12 @@ function PostList() {
         <div className="post-grid">
             {postMetaData.map((post) => (
                 <div key={post.slug} className="post-card mb-6">
-                    <h2 className="font-medium text-2xl tracking-tighter mb-4 hover:underline hover:decoration-theme-pink">
+                    <h2 className="font-bold text-2xl tracking-tighter mb-4 hover:underline hover:decoration-theme-pink">
                         <Link href={`/posts/${post.slug}`} className="post-card-title">
                             {post.title}
                         </Link>
                     </h2>
-                    <p className="mb-6">{post.subheading}</p>
+                    <p className="mb-4 text-gray-400">{post.subheading}</p>
                     <p>{post.excerpt}</p>
                     <Link href={`/posts/${post.slug}`} className="font-bold">
                         Read more

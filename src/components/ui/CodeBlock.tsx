@@ -1,7 +1,9 @@
 'use client'
 import { useTheme } from "next-themes";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { nightOwl, synthwave84, duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { customDarkTheme } from "@/lib/customDarkTheme";
+import { customLightTheme } from "@/lib/customLightTheme";
+// import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 interface CodeBlockProps {
     children: string
@@ -13,8 +15,8 @@ export default function CodeBlock({ children, className }: CodeBlockProps) {
     const language = match ? match[1] : 'text'
 
     const { theme } = useTheme();
-    const syntaxTheme = theme === "dark" ? synthwave84 : duotoneLight;
-    const bgColor = theme === "dark" ? "#1a1a1a" : "#F2F7FF";
+    const syntaxTheme = theme === "dark" ? customDarkTheme : customLightTheme;
+
 
 
     return (
@@ -26,7 +28,7 @@ export default function CodeBlock({ children, className }: CodeBlockProps) {
             )} */}
             <SyntaxHighlighter
                 style={syntaxTheme}
-                customStyle={{ margin: 0, padding: '1rem', backgroundColor: bgColor }}
+                customStyle={{ margin: 0, padding: '1rem'}}
                 language={language}
                 PreTag="div"
                 className="rounded-b-lg mt-0"

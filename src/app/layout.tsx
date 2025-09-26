@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
-import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "./globals.css";
 
 const neulisNeue = localFont({
@@ -31,7 +31,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system">
 
           {children}
-
+         
         </ThemeProvider>
       </body>
     </html>

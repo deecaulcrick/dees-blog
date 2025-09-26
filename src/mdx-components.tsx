@@ -42,7 +42,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         return <CodeBlock className={className}>{children}</CodeBlock>
       }
       return (
-        <code className="bg-theme-light-blue px-2 py-1 rounded font-mono text-smz border border-gray-300">
+        <code className="bg-theme-light-blue dark:bg-slate-900 px-4 py-1 rounded font-mono text-theme-teal dark:text-theme-dark-pink">
           {children}
         </code>
       )
@@ -50,7 +50,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
     // Pre tag for code blocks
     pre: ({ children }) => (
-      <pre className="bg-theme-light-blue dark:bg-slate-900 pt-0 dark:border dark:border-gray-700 text-white rounded-lg overflow-x-auto mb-4 text-sm">
+      <pre className="bg-theme-light-blue dark:bg-slate-900 dark:border dark:border-gray-700 text-white rounded-lg overflow-x-auto mb-4 px-4 text-lg">
         {children}
       </pre>
     ),

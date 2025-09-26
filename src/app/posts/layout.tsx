@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "@/components/Footer";
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,6 +13,10 @@ export default function PostLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main>{children}</main>
+        <main>{children}
+            <div className="w-full">
+                <Footer />
+            </div>
+        </main>
     );
 }
