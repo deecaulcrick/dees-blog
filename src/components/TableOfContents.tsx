@@ -103,9 +103,8 @@ export default function TableOfContents({ content, className = '' }: TableOfCont
                             <button
                                 onClick={() => scrollToHeading(item.id)}
                                 className={`
-                  block w-full text-left py-1 px-2 rounded text-sm transition-colors
-                  hover:bg-gray-100 hover:text-orange
-                  ${activeId === item.id ? 'text-orange font-medium bg-orange/10' : 'text-gray-600'}
+                  block w-full text-left py-1 px-2 rounded text-sm transition-colors hover:text-theme-dark-pink
+                  ${activeId === item.id ? 'text-theme-dark-pink font-medium bg-orange/10' : 'text-black dark:text-white'}
                 `}
                                 style={{
                                     paddingLeft: `${(item.level - 1) * 12 + 8}px`,

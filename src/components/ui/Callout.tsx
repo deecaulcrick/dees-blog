@@ -8,7 +8,7 @@ export default function Callout({ heading, text, type = 'info' }: CalloutProps) 
     const styles = {
         audience: 'bg-theme-pink/10 border-theme-pink',
         disclaimer: 'bg-theme-orange/10 border-theme-orange',
-        definition: 'bg-theme-green/10 border-theme-green',
+        definition: 'bg-theme-blue/10 border-theme-blue',
         info: 'bg-blue-50 border-blue-200 text-blue-900',
         warning: 'bg-yellow-50 border-yellow-200 text-yellow-900',
         error: 'bg-red-50 border-red-200 text-red-900',
