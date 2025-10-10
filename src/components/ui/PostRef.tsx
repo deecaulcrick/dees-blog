@@ -8,14 +8,14 @@ interface PostRefProps {
 
 function PostRef({ title, link, description }: PostRefProps) {
     return (
-        <div className='flex flex-col gap-4 my-8 p-10 border border-gray-300 dark:border-gray-700 rounded-lg hover:shadow-lg cursor-pointer'>
+        <div className='flex flex-col gap-4 my-8 p-6 md:p-10 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:shadow-sm cursor-pointer'>
             <div className=''>
                 <Link href={link || '#'}>
-                    <h3 className='font-medium text-2xl text-theme-orange hover:underline'>{title}</h3>
+                    <h3 className='font-heading tracking-tight text-3xl  hover:text-theme-dark-pink transition-colors'>{title}</h3>
                 </Link>
             </div>
             <div className=''>
-                <p className='text-sm'>{description}</p>
+                <p className=' font-body'>{description}</p>
             </div>
         </div >
     )

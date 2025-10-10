@@ -25,8 +25,8 @@ export default function Callout({ heading, text, type = 'info' }: CalloutProps) 
     }
 
     return (
-        <div className={`border-l-8 p-8 my-6 ${styles[type]}`}>
-            <h4 className={`font-bold text-xl mb-2 ${headingStyles[type]}`}>{heading}</h4>
+        <div className={`border-l-2 p-8 my-6 ${styles[type]}`}>
+            <h4 className={`font-mono font-medium uppercase text-xl mb-2 ${headingStyles[type]}`}>{heading}</h4>
             <p>{text}</p>
         </div>
     )

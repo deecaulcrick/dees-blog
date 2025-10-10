@@ -11,7 +11,7 @@ interface BookRefProps {
 
 function BookRef({ src, title, author, link, description }: BookRefProps) {
     return (
-        <div className='flex items-center gap-12 my-8 p-12 border border-gray-300 dark:border-gray-700 rounded-lg'>
+        <div className='flex items-center gap-12 my-8 p-12 border border-zinc-300 dark:border-zinc-700 rounded-lg'>
             <div className='w-[30%]'>
                 <Link href={link || '#'} target="_blank" rel="noopener noreferrer">
                     <Image
@@ -24,9 +24,9 @@ function BookRef({ src, title, author, link, description }: BookRefProps) {
                 </Link>
             </div>
             <div className='w-[70%]'>
-                <h3 className='font-medium text-xl'>{title}</h3>
-                <h4 className='font-medium text-lg text-gray-500 mb-8'>{author}</h4>
-                <p className='text-sm'>{description}</p>
+                <h3 className='font-heading font-light tracking-tight leading-none text-2xl mb-4'>{title}</h3>
+                <h4 className='font-mono uppercase text-sm text-gray-500 mb-8'>{author}</h4>
+                <p className='font-body'>{description}</p>
             </div>
         </div >
     )
