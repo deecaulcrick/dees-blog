@@ -21,7 +21,7 @@ export const customLightTheme = {
     },
     "pre[class*=\"language-\"]": {
         "color": "black",
-        "background": "#F2F7FF",
+        "background": "#f0f0f0",
         "textShadow": "0 1px white",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "fontSize": "1em",
