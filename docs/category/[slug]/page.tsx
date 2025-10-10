@@ -2,12 +2,12 @@ import Link from "next/link";
 import { getPostMetaData } from "@/lib/mdx";
 
 
-type PostMeta = {
-    category: string;
-    slug: string;
-    title: string;
-    description: string;
-};
+// type PostMeta = {
+//     category: string;
+//     slug: string;
+//     title: string;
+//     description: string;
+// };
 
 
 export const generateStaticParams = async () => {

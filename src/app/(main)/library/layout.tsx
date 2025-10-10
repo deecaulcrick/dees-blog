@@ -1,7 +1,5 @@
 'use client'
-import Header from '@/components/Header'
 import NavLink from '@/components/ui/NavLink'
-import Link from 'next/link'
 import React from 'react'
 
 

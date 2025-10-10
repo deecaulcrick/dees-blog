@@ -1,4 +1,4 @@
-import SnippetTable from "@/components/SnippetTable";
+
 import { getBooks } from "@/lib/notion";
 import Image from "next/image";
 

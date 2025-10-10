@@ -1,6 +1,4 @@
 import SnippetTable from "@/components/SnippetTable";
-import Pill from "@/components/ui/Pill";
-import IconArrowBullet from "@/components/icons/IconArrowBullet";
 
 
 export default function Home() {

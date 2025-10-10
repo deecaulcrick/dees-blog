@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
-import Footer from "../components/Footer";
 import "./globals.css";
 
 const generalSans = localFont({
@@ -51,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${generalSans.variable} ${zodiak.variable}antialiased`}>
+      <body className={`${generalSans.variable} ${zodiak.variable} ${tabular.variable} antialiased `} >
         <ThemeProvider attribute="class" defaultTheme="system">
 
           {children}

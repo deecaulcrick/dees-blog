@@ -40,7 +40,7 @@ function page() {
 
                     <Card className='text-center'>
                         <p>
-                            Here's what I'm currently reading, watching and listening to.
+                            Here’s what I’m currently reading, watching and listening to.
                         </p>
                     </Card>
                     {/* Name pronunciation? */}

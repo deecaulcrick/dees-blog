@@ -2,56 +2,6 @@ import React from 'react'
 import { Github, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
-const categories = [
-    {
-        link: '/essays',
-        linkText: 'Essays'
-    },
-    {
-        link: '/productivity',
-        linkText: 'Productivity'
-    },
-    {
-        link: '/computer-science',
-        linkText: 'Computer Science'
-    },
-    {
-        link: '/web-development',
-        linkText: 'Web Development '
-    },
-    {
-        link: '/network-engineering',
-        linkText: 'Network Engineering'
-    },
-]
-
-const general = [
-    {
-        link: '/about',
-        linkText: 'About Dee'
-    },
-    {
-        link: '/about-blog',
-        linkText: 'About The Blog'
-    },
-    {
-        link: '/contact',
-        linkText: 'Contact'
-    },
-]
-
-const goodies = [
-    {
-        link: 'https://notion.so/@deecaulcrick',
-        linkText: 'Notion Templates'
-    },
-    {
-        link: '/palette-finder',
-        linkText: 'Palette Finder'
-    },
-
-]
-
 function Footer() {
     return (
         <div className='mt-10 flex justify-between items-end border-t border-dashed border-zinc-400 dark:border-zinc-500 px-10 py-4 absolute ebottom-0 w-full'>

@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Splash from "@/components/shape-dividers/Splash";
 import SideBar from "@/components/SideBar";
 
 export default function RootLayout({

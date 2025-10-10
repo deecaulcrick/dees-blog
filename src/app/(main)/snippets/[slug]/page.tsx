@@ -3,8 +3,6 @@ import path from "path";
 import BlogPost from "@/components/BlogPost";
 import matter from "gray-matter";
 import { getSnippetMetaData } from "@/lib/mdx";
-import Header from "@/components/Header";
-import TableOfContents from "@/components/TableOfContents";
 
 const getPostContent = (slug: string) => {
     const folder = path.join(process.cwd(), "src/content/snippets/");
@@ -32,16 +30,16 @@ const singlePost = async (props: SinglePostProps) => {
 
     return (
         <>
-        
+
             <div className="flex flex-col items-center px-8 md:px-10 lg:px-16">
                 <div className="w-full md:w-[80%]">
-                      <div className="mb-20 py-16 px-8 md:px-10 lg:px-16">
-                    <p className="font-mono uppercase text-sm text-center mb-4"><i>Filed under </i><b>{postContent.data.category}</b> <i>on</i> <b>{postContent.data.date}</b></p>
-                    <h1 className="h1 text-center tracking-tight">{postContent.data.title}</h1>
-                    <p className=" font-body text-lg text-center">{postContent.data.description}</p>
+                    <div className="mb-20 py-16 px-8 md:px-10 lg:px-16">
+                        <p className="font-mono uppercase text-sm text-center mb-4"><i>Filed under </i><b>{postContent.data.category}</b> <i>on</i> <b>{postContent.data.date}</b></p>
+                        <h1 className="h1 text-center tracking-tight">{postContent.data.title}</h1>
+                        <p className=" font-body text-lg text-center">{postContent.data.description}</p>
 
 
-                </div>
+                    </div>
                     <BlogPost content={postContent.content} />
                 </div>
             </div>

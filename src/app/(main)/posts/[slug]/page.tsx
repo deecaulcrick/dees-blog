@@ -3,13 +3,9 @@ import path from "path";
 import BlogPost from "@/components/BlogPost";
 import matter from "gray-matter";
 import { getPostMetaData } from "@/lib/mdx";
-import Header from "@/components/Header";
 import TableOfContents from "@/components/TableOfContents";
-import Splash from "@/components/shape-dividers/Splash";
 import { MoveLeft } from "lucide-react";
 import Link from 'next/link'
-import { useRouter } from "next/router";
-
 
 
 const getPostContent = (slug: string) => {
