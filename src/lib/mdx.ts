@@ -19,6 +19,7 @@ export const getPostMetaData = () => {
             subheading: matterResult.data.subheading,
             coverImage: matterResult.data.coverImage,
             tag: matterResult.data.tag,
+            category: matterResult.data.category,
             slug: filename.replace('.mdx', ''),
         }
     })

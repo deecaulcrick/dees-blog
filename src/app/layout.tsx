@@ -4,16 +4,40 @@ import { ThemeProvider } from "next-themes";
 import Footer from "../components/Footer";
 import "./globals.css";
 
-const neulisNeue = localFont({
+const generalSans = localFont({
   src: [
-    { path: "../../public/fonts/fonnts.com-Neulis_Neue_Bold_Italic.otf", weight: "700", style: "italic" },
-    { path: "../../public/fonts/fonnts.com-Neulis_Neue_Bold.otf", weight: "700", style: "normal" },
-    { path: "../../public/fonts/fonnts.com-Neulis_Neue_Italic.otf", weight: "400", style: "italic" },
-    { path: "../../public/fonts/fonnts.com-Neulis_Neue_Regular.otf", weight: "400", style: "normal" },
-    { path: "../../public/fonts/fonnts.com-Neulis_Neue_Medium_Italic.otf", weight: "500", style: "italic" },
-    { path: "../../public/fonts/fonnts.com-Neulis_Neue_Medium.otf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/GeneralSans/fonts/GeneralSans-BoldItalic.woff", weight: "700", style: "italic" },
+    { path: "../../public/fonts/GeneralSans/fonts/GeneralSans-Bold.woff", weight: "700", style: "normal" },
+    { path: "../../public/fonts/GeneralSans/fonts/GeneralSans-Italic.woff", weight: "400", style: "italic" },
+    { path: "../../public/fonts/GeneralSans/fonts/GeneralSans-Regular.woff", weight: "400", style: "normal" },
+    { path: "../../public/fonts/GeneralSans/fonts/GeneralSans-MediumItalic.woff", weight: "500", style: "italic" },
+    { path: "../../public/fonts/GeneralSans/fonts/GeneralSans-Medium.woff", weight: "500", style: "normal" },
+
   ],
-  variable: "--font-neulis-neue",
+  variable: "--font-general-sans",
+});
+const tabular = localFont({
+  src: [
+    { path: "../../public/fonts/Tabular/Tabular-BoldItalic.woff", weight: "700", style: "italic" },
+    { path: "../../public/fonts/Tabular/Tabular-Bold.woff", weight: "700", style: "normal" },
+    { path: "../../public/fonts/Tabular/Tabular-Italic.woff", weight: "400", style: "italic" },
+    { path: "../../public/fonts/Tabular/Tabular-Regular.woff", weight: "400", style: "normal" },
+    { path: "../../public/fonts/Tabular/Tabular-MediumItalic.woff", weight: "500", style: "italic" },
+    { path: "../../public/fonts/Tabular/Tabular-Medium.woff", weight: "500", style: "normal" },
+
+  ],
+  variable: "--font-tabular",
+});
+const zodiak = localFont({
+  src: [
+    { path: "../../public/fonts/Zodiak/fonts/Zodiak-BoldItalic.woff", weight: "700", style: "italic" },
+    { path: "../../public/fonts/Zodiak/fonts/Zodiak-Bold.woff", weight: "700", style: "normal" },
+    { path: "../../public/fonts/Zodiak/fonts/Zodiak-Italic.woff", weight: "400", style: "italic" },
+    { path: "../../public/fonts/Zodiak/fonts/Zodiak-Regular.woff", weight: "400", style: "normal" },
+    { path: "../../public/fonts/Zodiak/fonts/Zodiak-LightItalic.woff", weight: "300", style: "italic" },
+    { path: "../../public/fonts/Zodiak/fonts/Zodiak-Light.woff", weight: "300", style: "normal" },
+  ],
+  variable: "--font-zodiak",
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,11 +51,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${neulisNeue.variable} antialiased`}>
+      <body className={`${generalSans.variable} ${zodiak.variable}antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system">
 
           {children}
-         
+
         </ThemeProvider>
       </body>
     </html>

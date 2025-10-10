@@ -18,19 +18,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     h2: ({ children, ...props }) => (
-      <h2 {...props} className="relative px-4 text-4xl text-theme-teal dark:text-theme-pink font-semibold mb-4 mt-8 before:content-['#'] before:font-normal before:absolute before:-left-4 before:hidden hover:before:block before:transition-all">
+      <h2 {...props} className=" font-heading relative px-4 text-4xl text-theme-dark-green tracking-tight dark:text-theme-pink font-normal mb-4 mt-8 before:content-['#'] before:font-normal before:absolute before:-left-4 before:hidden hover:before:block before:transition-all">
         {children}
       </h2>
     ),
     h3: ({ children, ...props }) => (
-      <h3 {...props} className="text-2xl px-4 font-medium mb-3 mt-6 text-foreground">
+      <h3 {...props} className="font-heading text-2xl px-4 font-normal mb-3 mt-6 text-foreground">
         {children}
       </h3>
     ),
 
     // Custom paragraph styling
     p: ({ children }) => (
-      <p className="mb-4 px-4 leading-relaxed text-foreground text-lg">
+      <p className="font-body mb-4 px-4 leading-relaxed text-foreground text-lg">
         {children}
       </p>
     ),

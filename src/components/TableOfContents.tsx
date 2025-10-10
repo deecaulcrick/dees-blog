@@ -95,7 +95,7 @@ export default function TableOfContents({ content, className = '' }: TableOfCont
 
     return (
         <div className={`toc-container ${className}`}>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Table of Contents</h3>
+    
             <nav className="toc-nav">
                 <ul className="space-y-1">
                     {toc.map((item) => (
@@ -103,8 +103,8 @@ export default function TableOfContents({ content, className = '' }: TableOfCont
                             <button
                                 onClick={() => scrollToHeading(item.id)}
                                 className={`
-                  block w-full text-left py-1 px-2 rounded text-sm transition-colors hover:text-theme-dark-pink
-                  ${activeId === item.id ? 'text-theme-dark-pink font-medium bg-orange/10' : 'text-black dark:text-white'}
+                  block w-full text-right py-1 px-2 rounded text-xs transition-colors hover:text-theme-dark-pink
+                  ${activeId === item.id ? 'text-theme-dark-pink font-medium bg-orange/10' : 'text-gray-700 dark:text-white'}
                 `}
                                 style={{
                                     paddingLeft: `${(item.level - 1) * 12 + 8}px`,

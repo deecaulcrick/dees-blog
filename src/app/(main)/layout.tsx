@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Splash from "@/components/shape-dividers/Splash";
+import SideBar from "@/components/SideBar";
 
 export default function RootLayout({
   children,
@@ -8,21 +9,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="bg-theme-green dark:bg-theme-teal h-70 w-full flex justify-center">
-          <div className="container px-8 md:px-15 lg:px-30 ">
+    <div className="flex justify-center h-screen">
+      <div className="container border-x border-dashed border-zinc-400 dark:border-zinc-500 flex ">
+        <SideBar />
+        <div className="flex-1 overflow-y-auto hide-scrollbar ">
+          <div className="relative w-full">
             <Header />
           </div>
+
+
+          {children}
+          <div className="relative w-full md:hidden">
+            <Footer />
+          </div>
         </div>
-        <div className="w-full">
-          <Splash />
-        </div>
-        {children}
       </div>
-      <div className="w-full">
-        <Footer />
-      </div>
-    </>
+
+    </div>
   );
 }

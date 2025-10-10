@@ -32,26 +32,20 @@ const singlePost = async (props: SinglePostProps) => {
 
     return (
         <>
+        
+            <div className="flex flex-col items-center px-8 md:px-10 lg:px-16">
+                <div className="w-full md:w-[80%]">
+                      <div className="mb-20 py-16 px-8 md:px-10 lg:px-16">
+                    <p className="font-mono uppercase text-sm text-center mb-4"><i>Filed under </i><b>{postContent.data.category}</b> <i>on</i> <b>{postContent.data.date}</b></p>
+                    <h1 className="h1 text-center tracking-tight">{postContent.data.title}</h1>
+                    <p className=" font-body text-lg text-center">{postContent.data.description}</p>
 
-            <div className="container">
-                <div>
-                    <div className="mb-20">
-                        <h1 className="h1 font-bold text-center">{postContent.data.title}</h1>
-                        <p className="text-lg text-center">{postContent.data.description}</p>
 
-                        <p className="mt-10 text-center"><i>Filed under </i><b>{postContent.data.category}</b> <i>on</i> <b>{postContent.data.date}</b></p>
-                    </div>
                 </div>
-                <div className="flex flex-col items-center px-8 md:px-10 lg:px-20">
-                    <div className="w-full md:w-[80%]">
-                        <BlogPost content={postContent.content} />
-                    </div>
+                    <BlogPost content={postContent.content} />
                 </div>
             </div>
-
-
         </>
-
     );
 };
 

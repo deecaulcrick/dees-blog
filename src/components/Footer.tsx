@@ -1,6 +1,6 @@
 import React from 'react'
-import MultiCloud from '@/components/shape-dividers/MultiCloud'
-import LinkItem from './ui/LinkItem'
+import { Github, Linkedin } from 'lucide-react'
+import Link from 'next/link'
 
 const categories = [
     {
@@ -54,42 +54,16 @@ const goodies = [
 
 function Footer() {
     return (
-        <div className="footer flex flex-col justify-center items-center">
-            <MultiCloud />
-            <div className="container grid gap-6 md:grid-cols-12 py-15 px-8 lg:px-20">
-                <div className="col-span-5">
-                    <h4 className=' font-bold text-xl'>Dee Caulcrick</h4>
-                    <h5 className='font-medium mb-4'>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h5>
-                    {/* <p >Enter your email to get notified when I post new stuff.</p> */}
-                </div>
-                <div className=" grid col-span-7 grid-cols-12">
-                    <div className=" hidden md:block col-span-6 md:col-span-4">
-                        <h3 className='font-medium text-lg text-gray-700 dark:text-theme-green uppercase mb-4 text-right'>Categories</h3>
-                        <div className='flex flex-col gap-1 items-end'>
-                            {categories.map((item) => (
-                                <LinkItem key={item.link} link={item.link} linkText={item.linkText} />
-                            ))}
-                        </div>
-                    </div>
-                    <div className="col-span-6 md:col-span-4">
-                        <h3 className='font-medium text-lg text-gray-700 dark:text-theme-green uppercase mb-4 md:text-right'>Goodies</h3>
-                        <div className='flex flex-col gap-1 md:items-end'>
-                            {goodies.map((item) => (
-                                <LinkItem key={item.link} link={item.link} linkText={item.linkText} />
-                            ))}
-                        </div>
-                    </div>
-                    <div className="col-span-6 md:col-span-4">
-                        <h3 className='font-medium text-lg text-gray-700 dark:text-theme-green uppercase md:text-right mb-4'>General</h3>
-                        <div className='flex flex-col gap-1 md:items-end'>
-                            {general.map((item) => (
-                                <LinkItem key={item.link} link={item.link} linkText={item.linkText} />
-                            ))}
-                        </div>
-                    </div>
-                </div>
+        <div className='mt-10 flex justify-between items-end border-t border-dashed border-zinc-400 dark:border-zinc-500 px-10 py-4 absolute ebottom-0 w-full'>
+            <div className='flex gap-2'>
+                <Link href="https://www.linkedin.com/in/deborah-caulcrick/" target="_blank" rel="noopener noreferrer" className='inline-block '>
+                    <Linkedin strokeWidth={0} className='w-5 h-5 inline-block fill-zinc-900 dark:fill-zinc-300 hover:fill-theme-dark-pink dark:hover:fill-theme-dark-pink transition-colors' />
+                </Link>
+                <Link href="https://github.com/deecaulcrick" target="_blank" className='inline-block'>
+                    <Github strokeWidth={0} className='w-5 h-5 inline-block fill-zinc-900 dark:fill-zinc-300 hover:fill-theme-dark-pink dark:hover:fill-theme-dark-pink transition-colors' />
+                </Link>
             </div>
-
+            <div className='font-mono text-gray-400 text-xs'>&copy; 2020 - {new Date().getFullYear()}</div>
         </div>
     )
 }
