@@ -18,9 +18,9 @@ export const generateStaticParams = async () => {
 };
 
 interface SinglePostProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 

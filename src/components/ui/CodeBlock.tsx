@@ -27,8 +27,9 @@ export default function CodeBlock({ children, className }: CodeBlockProps) {
                 </div>
             )} */}
             <SyntaxHighlighter
-                style={syntaxTheme}
-                customStyle={{ margin: 0, padding: '1rem'}}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                style={syntaxTheme as any}
+                customStyle={{ margin: 0, padding: '1rem' }}
                 language={language}
                 PreTag="div"
                 className="rounded-b-lg mt-0"
