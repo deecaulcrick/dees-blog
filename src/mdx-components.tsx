@@ -18,7 +18,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     h2: ({ children, ...props }) => (
-      <h2 {...props} className=" font-heading relative px-4 text-4xl text-theme-dark-green tracking-tight dark:text-theme-pink font-normal mb-4 mt-8 before:content-['#'] before:font-normal before:absolute before:-left-4 before:hidden hover:before:block before:transition-all">
+      <h2 {...props} className=" font-heading relative px-4 text-4xl text-theme-dark-green tracking-tight dark:text-theme-blue font-normal mb-4 mt-8 before:content-['#'] before:font-normal before:absolute before:-left-4 before:hidden hover:before:block before:transition-all">
         {children}
       </h2>
     ),

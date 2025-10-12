@@ -6,11 +6,11 @@ import Moon from "../icons/Moon";
 
 export default function DarkModeToggle() {
     const { theme, setTheme } = useTheme();
-    const { playClick } = useSoundStore();
+    // const { playClick } = useSoundStore();
     return (
         <button
             onClick={() => {
-                playClick();
+                // playClick();
                 setTheme(theme === "dark" ? "light" : "dark");
             }}
             className=" dark:text-white"

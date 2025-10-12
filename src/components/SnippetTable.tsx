@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MoveRight } from "lucide-react";
 import { getSnippetMetaData } from "@/lib/mdx";
 
 function SnippetTable() {
@@ -32,15 +33,15 @@ function SnippetTable() {
             </div>
             <div className="md:hidden">
                 {postMetaData.map((post) => (
-                    <div key={post.slug} className="rounded-lg shadow-lg p-10 mb-6 border border-gray-100 dark:border-gray-800">
-                        <h2 className="text-theme-pink font-medium text-2xl tracking-tighter mb-4 hover:underline hover:decoration-theme-pink">
+                    <div key={post.slug} className="rounded-sm hover:shadow-sm p-10 mb-6 border border-zinc-200 dark:border-zinc-800">
+                        <h2 className="font-heading font-light text-2xl tracking-tighter mb-4 hover:underline hover:decoration-theme-pink">
                             <Link href={`/snippets/${post.slug}`} className="post-card-title">
                                 {post.title}
                             </Link>
                         </h2>
-                        <p className="mb-6">{post.description}</p>
+                        <p className="font-body mb-6">{post.description}</p>
                         <Link href={`/snippets/${post.slug}`} className="font-bold">
-                            Read more
+                            <MoveRight strokeWidth={1} size={24} className="inline-block" />
                         </Link>
                         {/* <p className="post-date">{post.date}</p> */}
                     </div>

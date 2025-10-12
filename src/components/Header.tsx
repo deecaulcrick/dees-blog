@@ -21,7 +21,7 @@ function Header() {
                 </div>
             </div>
             <div className=' col-span-6 md:col-span-3 flex gap-4 items-right justify-end'>
-                <div><SoundToggle /></div>
+                {/* <div><SoundToggle /></div> */}
                 <div><DarkModeToggle /></div>
             </div>
         </div>
