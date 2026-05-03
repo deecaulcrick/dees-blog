@@ -4,7 +4,7 @@ excerpt: In this tutorial, you'll learn how to set up and run your very own web 
 date: October 17, 2023
 tag: NodeJS
 category: web-development
-coverImage: "web-scraping.png"
+coverImage: "/images/web-scraping-screenshot.png"
 ---
 
 In today's digital age, the internet is an ocean of information. But often, the data we need isn't readily available in a convenient format. This is where web scraping comes in handy.
@@ -41,34 +41,34 @@ Start by installing Node.js on your computer. You can download it from the [offi
 
 Open your terminal and navigate to your desired directory. Create a new folder for your project.
 
-```bash
+<Terminal>
 mkdir web-scraper
 cd web-scraper
-```
+</Terminal>
 
 ### Step 3: Initialize a new Node.js project
 
 Run the following command in your terminal to create a **`package.json`** file.
 
-```bash
+<Terminal>
 npm init -y
-```
+</Terminal>
 
 ### Step 4: Install Cheerio
 
 Install the Cheerio library using npm.
 
-```bash
+<Terminal>
 npm install cheerio
-```
+</Terminal>
 
 ### **Step 5: Create `scraper.js` File**
 
 Create a new file named **`scraper.js`** in your project folder.
 
-```bash
+<Terminal>
 touch scraper.js
-```
+</Terminal>
 
 ### Step 6: Require modules
 
@@ -145,7 +145,7 @@ response.on("end", () => {
 
 Here's an example of what your **`scraper.js`** file might look like:
 
-```javascript
+```javascript filename="scraper.js"
 // scraper.js
 const https = require("https"); // or const https = require('https');
 const cheerio = require("cheerio");
@@ -195,7 +195,7 @@ https
 ```
 
 And here's the result in my console:
-<BlogImage src="/images/web-scraping-screenshot.png" alt="Screenshot of terminal" type="screenshot" />
+<Image src="/images/web-scraping-screenshot.png" alt="Screenshot of terminal" caption="Screenshot of terminal" />
 
 With this, you have built your first web scraper! You can now use this as a starting point to scrape more complex websites and extract more data. However, it is also essential to understand the legal implications and respect the terms of service of the websites you scrape.
 

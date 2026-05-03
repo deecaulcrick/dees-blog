@@ -5,9 +5,9 @@ excerpt: We’ve all been there – you’re lying on your bed on a Friday night
 date: July 12, 2024
 tag: Network Engineering
 category: networking
+coverImage: '/images/risky-text/yearning.png'
 ---
 
-![me yearning](/images/risky-text/yearning.png)
 
 We’ve all been there – you’re lying on your bed on a Friday night, chronically yearning, and about to send that text message that could change everything. Maybe it’s confessing your feelings, making a bold decision, or something you would regret the moment you send it. But have you ever wondered what happens when you hit 'send' on that text that could ruin your life or embarrass you for years to come? I’m gonna explain it to you using the TCP/IP and the OSI models to see how that risky text travels from your phone to its destination.
 
@@ -24,7 +24,7 @@ While TCP/IP is the practical model used in the real world, OSI is a more detail
 
 TCP/IP stands for **Transmission Control Protocol/Internet Protocol.** TCP/IP was developed in the 1970s and became the foundation of the modern internet. This is the practical model we use in the real world. It’s a straightforward, four-layer model:
 
-![TCP/IP Network Model](/images/risky-text/tcp_ip-model.png)
+<Image src="/images/risky-text/tcp_ip-model.png" alt="TCP/IP Network Model" caption="TCP/IP Network Model" />
 
 1. **Layer 4 – Application Layer**
 
@@ -80,7 +80,7 @@ OSI stands for **Open Systems Interconnection**, and it’s typically a referenc
 OSI was developed in the late 1970s as a universal set of standards to help different systems communicate with each other. Unlike TCP/IP, OSI breaks the process down into seven layers:
 The OSI model is more detailed, breaking the networking process into seven layers:
 
-![OSI Network Model](/images/risky-text/osi-model.png)
+<Image src="/images/risky-text/osi-model.png" alt="OSI Network Model" caption="OSI Network Model" />
 
 **Layer 7 — Application Layer (TCP/IP: Application Layer):** This layer interacts with software applications to provide networking services, like sending a text through WhatsApp or iMessage.
 
@@ -105,7 +105,7 @@ This layer transmits raw data as electrical signals, light pulses, or radio wave
 | Practical Use  | TCP/IP is the backbone of the internet, and most modern networks are based on this model.                                 | OSI is mainly used as an educational tool to understand how different networking components interact.                                           |
 | Layer Overlaps | Some layers in the OSI model map directly to those in the TCP/IP model.                                                   | The OSI's Network Layer corresponds to TCP/IP's Internet Layer, and both models' Transport Layers handle similar functions.                     |
 
-![TCP/IP vs. OSI](/images/risky-text/comparison.png)
+<Image src="/images/risky-text/comparison.png" alt="TCP/IP vs. OSI" caption="TCP/IP vs. OSI" />
 
 Understanding these layers not only helps in grasping how the internet works but also provides a foundation for troubleshooting network issues, optimizing performance, and securing data transmission.
 
@@ -129,7 +129,7 @@ Once your risky text has traveled through all these layers and across the networ
 - Recipient leaves you on read or even worse replies with a variant of **_“lol”,_** or **_“eww, no”_**
 - Recipient takes a screenshot and posts it on Twitter, without blurring out your name, with the caption, **_“look at this clown”._**
 
-![Don't send a risky text](/images/risky-text/risky-text.png)
+<Image src="/images/risky-text/risky-text.png" alt="Don't send a risky text" caption="Don't send a risky text" />
 
 ## It’s More Than Just Hitting “Send”
 
@@ -139,6 +139,6 @@ So, next time you’re about to send that risky text, take a moment to think abo
 
 ### Related Posts:
 
-<PostRef link='/posts/what-is-an-ip-address' title='What the heck is an IP Address?' description='In a world where almost everyone has at least one digital device, I’m pretty sure you’ve heard the term “IP address” thrown around quite a bit, but what exactly is it, and why is it so important?'/>
+<LinkCard href='/posts/what-is-an-ip-address' title='What the heck is an IP Address?' description="In a world where almost everyone has at least one digital device, I'm pretty sure you've heard the term IP address thrown around quite a bit, but what exactly is it, and why is it so important?" />
 
 

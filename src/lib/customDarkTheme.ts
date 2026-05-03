@@ -39,10 +39,10 @@ export const customDarkTheme = {
     "padding": "1em",
     "margin": ".5em 0",
     "overflow": "auto",
-    "backgroundColor": "#161616"
+    "backgroundColor": "#0D1E1F"
   },
   ":not(pre) > code[class*=\"language-\"]": {
-    "backgroundColor": "#161616",
+    "backgroundColor": "#0D1E1F",
     "padding": ".1em",
     "borderRadius": ".3em",
     "whiteSpace": "normal"

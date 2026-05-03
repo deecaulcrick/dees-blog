@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function SideBar() {
     return (
-        <div className='hidden md:flex flex-col border-r border-dashed border-zinc-400 dark:border-zinc-500 px-10 h-screen w-[20%] p-20 justify-between'>
+        <div className='hidden lg:flex flex-col border-r border-dashed border-zinc-400 dark:border-zinc-500 px-10 h-screen w-[20%] p-20 justify-between'>
             <div>
                 <h2 className='font-heading text:lg text-lg lg:text-4xl tracking-tight leading-none'>Dee <br />Caulcrick</h2>
                 <p className='font-body text-base mt-6'>A blog on computer science and web development.</p>
