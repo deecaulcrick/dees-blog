@@ -29,39 +29,37 @@ export function CodeBlock({ children, filename }: CodeBlockProps) {
   }
 
   return (
-    <div className="my-6 rounded-xl border border-border overflow-hidden">
-      {filename && (<div className="flex items-center justify-between p-3 px-6 bg-muted border-b border-border">
-        <span className="text-xl font-medium text-foreground">
+    <div className="my-6 border border-border text-xl w-full min-w-0">
+      {filename && (<div className="flex items-center justify-between bg-background border-b border-border p-0">
+        <div className="text-lg font-medium text-foreground py-3 px-6  h-12">
           {filename ?? " "}
-        </span>
-        <div className="flex items-center gap-2">
-          {/* {language !== "text" && (
-            <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-0.5 rounded border border-border">
-              {language}
-            </span>
-          )} */}
+        </div>
+        <div className=" ">
+
           <button
             onClick={handleCopy}
-            className="flex items-center gap-2 p-2 text-foreground rounded border border-border"
+            className="font-mono uppercase flex items-center gap-2 py-3 px-6  text-base bg-transparent h-12 hover:bg-foreground hover:text-background transition-colors border-l border-border text-foreground"
             aria-label={copied ? "Copied" : "Copy code"}
-          >
+          > {copied ? "Copied" : "Copy"}
             {copied ? (
               <Check className="h-3.5 w-3.5 text-[var(--green)]" />
             ) : (
               <Copy className="h-3.5 w-3.5" />
-            )} {copied ? "Copied" : "Copy code"}
+            )}
           </button>
         </div>
       </div>)}
-      <SyntaxHighlighter
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        style={syntaxTheme as any}
-        language={language}
-        PreTag="div"
-        customStyle={{ margin: 0, padding: "1rem", fontSize: "0.875rem", lineHeight: "1.6" }}
-      >
-        {code}
-      </SyntaxHighlighter>
+      <div className="overflow-x-auto">
+        <SyntaxHighlighter
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          style={syntaxTheme as any}
+          language={language}
+          PreTag="div"
+          customStyle={{ margin: 0, padding: "1rem", fontSize: "1.2rem", lineHeight: "1.6" }}
+        >
+          {code}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 }

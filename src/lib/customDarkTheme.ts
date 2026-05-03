@@ -1,8 +1,8 @@
 export const customDarkTheme = {
   "code[class*=\"language-\"]": {
-    "color": "#f92aad",
+    "color": "#F5EFE0",
     "background": "none",
-    "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+    "fontFamily": "DM Mono, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     "fontSize": "1em",
     "textAlign": "left",
     "whiteSpace": "pre",
@@ -19,9 +19,9 @@ export const customDarkTheme = {
     "hyphens": "none"
   },
   "pre[class*=\"language-\"]": {
-    "color": "#f92aad",
+    "color": "#F5EFE0",
     "background": "none",
-    "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+    "fontFamily": "DM Mono, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     "fontSize": "1em",
     "textAlign": "left",
     "whiteSpace": "pre",
@@ -39,120 +39,131 @@ export const customDarkTheme = {
     "padding": "1em",
     "margin": ".5em 0",
     "overflow": "auto",
-    "backgroundColor": "#0D1E1F"
+    "backgroundColor": "#181818"
   },
   ":not(pre) > code[class*=\"language-\"]": {
-    "backgroundColor": "#0D1E1F",
+    "backgroundColor": "#181818",
     "padding": ".1em",
     "borderRadius": ".3em",
     "whiteSpace": "normal"
   },
+  // forest green, slightly brightened — subdued but readable
   "comment": {
-    "color": "#8e8e8e"
+    "color": "#5A9060"
   },
   "block-comment": {
-    "color": "#8e8e8e"
+    "color": "#5A9060"
   },
   "prolog": {
-    "color": "#8e8e8e"
+    "color": "#5A9060"
   },
   "doctype": {
-    "color": "#8e8e8e"
+    "color": "#5A9060"
   },
   "cdata": {
-    "color": "#8e8e8e"
+    "color": "#5A9060"
   },
+  // baby blue — neutral, non-competing
   "punctuation": {
-    "color": "#ccc"
+    "color": "#82C8E8"
   },
+  // coral/tomato — tags, numbers, markup
   "tag": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
   "attr-name": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
   "namespace": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
   "number": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
   "unit": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
   "hexcode": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
   "deleted": {
-    "color": "#e2777a"
+    "color": "#EE6048"
   },
+  // lime/yellow-green — CSS properties, selectors
   "property": {
-    "color": "#72f1b8",
+    "color": "#9DC820",
   },
   "selector": {
-    "color": "#72f1b8",
+    "color": "#9DC820",
   },
+  // cobalt blue, lightened — named function definitions
   "function-name": {
-    "color": "#6196cc"
+    "color": "#6B88F0"
   },
+  // peach/salmon — booleans, id selectors
   "boolean": {
-    "color": "#fdfdfd",
+    "color": "#F4A898",
   },
   "selector.id": {
-    "color": "#fdfdfd",
-
+    "color": "#F4A898",
   },
+  // yellow — function calls (distinct from function-name)
   "function": {
-    "color": "#fdfdfd",
+    "color": "#F5CC10",
   },
+  // forest green — class names (distinct shade from lime properties)
   "class-name": {
-    "color": "#fff5f6",
+    "color": "#38B84D",
   },
+  // hot pink/magenta — constants, symbols
   "constant": {
-    "color": "#f92aad",
+    "color": "#EC5FA0",
   },
   "symbol": {
-    "color": "#f92aad",
+    "color": "#EC5FA0",
   },
+  // orange — keywords, builtins, at-rules
   "important": {
-    "color": "#f4eee4",
+    "color": "#FB3B00",
   },
   "atrule": {
-    "color": "#f4eee4",
+    "color": "#FB3B00",
   },
   "keyword": {
-    "color": "#f4eee4",
+    "color": "#FB3B00",
   },
   "selector.class": {
-    "color": "#f4eee4",
+    "color": "#FB3B00",
   },
   "builtin": {
-    "color": "#f4eee4",
+    "color": "#FB3B00",
   },
+  // purple, lightened — strings, variables, values
   "string": {
-    "color": "#f87c32"
+    "color": "#F689EB"
   },
   "char": {
-    "color": "#f87c32"
+    "color": "#F689EB"
   },
   "attr-value": {
-    "color": "#f87c32"
+    "color": "#F689EB"
   },
   "regex": {
-    "color": "#f87c32"
+    "color": "#F689EB"
   },
   "variable": {
-    "color": "#f87c32"
+    "color": "#F689EB"
   },
+  // red — operators, entities, urls
   "operator": {
-    "color": "#67cdcc"
+    "color": "#E63030"
   },
   "entity": {
-    "color": "#67cdcc",
+    "color": "#E63030",
     "cursor": "help"
   },
   "url": {
-    "color": "#67cdcc"
+    "color": "#E63030"
   },
   "bold": {
     "fontWeight": "bold"
@@ -161,6 +172,6 @@ export const customDarkTheme = {
     "fontStyle": "italic"
   },
   "inserted": {
-    "color": "green"
+    "color": "#38B84D"
   }
 };

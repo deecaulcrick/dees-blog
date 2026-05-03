@@ -8,18 +8,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex justify-center">
-      <div className="container flex border-x border-0.5 border-dashed border-border ">
+    <div className="max-w-7xl mx-auto flex justify-center">
+      <div className="p-2 lg:p-6 w-full">
         <div className=" hide-scrollbar ">
-          <div className="relative w-full mb-20">
+          <div className="relative w-full">
             <Header />
           </div>
-
-
           {children}
-          <div className="relative w-full lg:hidden">
+          {/* <div className="relative w-full lg:hidden">
             <Footer />
-          </div>
+          </div> */}
         </div>
       </div>
 

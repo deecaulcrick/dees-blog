@@ -7,10 +7,11 @@ interface BlockquoteProps extends React.BlockquoteHTMLAttributes<HTMLQuoteElemen
 export function Blockquote({ children, cite, ...props }: BlockquoteProps) {
   return (
     <blockquote
-      className="my-6 border-l-2 border-[var(--blue)] pl-6 py-1"
+      className="my-6 border-l-2 border-border pl-6 py-1"
       {...props}
     >
-      <div className="font-serif italic text-foreground leading-relaxed">
+      <div className="font-serif text-foreground leading-10">
+        <div className="text-7xl font-serif -mb-8"> “</div>
         {children}
       </div>
       {cite && (

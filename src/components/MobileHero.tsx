@@ -44,7 +44,7 @@ function MobileHero() {
                 <div className="-rotate-7 ml-14">
                     <Image src="/images/hero/hi.svg" width={100} height={100} alt="" />
                 </div>
-                <h1 className="text-8xl font-bold tracking-tight leading-20 flex items-center gap-3 flex-wrap text-center justify-center">
+                <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-12 md:leading-20 flex items-center gap-3 flex-wrap text-center justify-center">
                     deborah
                     <br />caulcrick
                 </h1>
@@ -56,7 +56,7 @@ function MobileHero() {
             </div>
 
             {/* Draggable image section */}
-            <div className="relative w-full h-72"
+            <div className="hidden md:block relative w-full h-72"
                 style={{ cursor: isActive ? 'none' : 'auto' }}
             >
                 {DRAGGABLE_IMAGES.map(({ src, width, height, top, left, rotate }) => (

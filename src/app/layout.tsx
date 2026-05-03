@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Work_Sans, DM_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
 
 const clashGrotesk = localFont({
@@ -15,18 +16,50 @@ const clashGrotesk = localFont({
   variable: "--font-clash-grotesk",
   display: "swap"
 });
-const tabular = localFont({
-  src: [
-    { path: "../../public/fonts/Tabular/Tabular-BoldItalic.woff", weight: "700", style: "italic" },
-    { path: "../../public/fonts/Tabular/Tabular-Bold.woff", weight: "700", style: "normal" },
-    { path: "../../public/fonts/Tabular/Tabular-Italic.woff", weight: "400", style: "italic" },
-    { path: "../../public/fonts/Tabular/Tabular-Regular.woff", weight: "400", style: "normal" },
-    { path: "../../public/fonts/Tabular/Tabular-MediumItalic.woff", weight: "500", style: "italic" },
-    { path: "../../public/fonts/Tabular/Tabular-Medium.woff", weight: "500", style: "normal" },
-
-  ],
-  variable: "--font-tabular",
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-work-sans",
 });
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
+  weight: "400",
+  style: "normal",
+  display: "swap"
+});
+const merriwether = Merriweather({
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+  weight:[ "400", "500", "700", "800", "900"],
+  style: "normal",
+  display: "swap"
+});
+
+const gambetta = localFont({
+  src: [
+    { path: "../../public/fonts/Gambetta/Gambetta-Regular.woff", weight: " 400", style: "normal" },
+    { path: "../../public/fonts/Gambetta/Gambetta-Italic.woff", weight: " 400", style: "italic" },
+    { path: "../../public/fonts/Gambetta/Gambetta-Medium.woff", weight: " 500", style: "normal" },
+    { path: "../../public/fonts/Gambetta/Gambetta-MediumItalic.woff", weight: " 500", style: "italic" },
+    { path: "../../public/fonts/Gambetta/Gambetta-Semibold.woff", weight: " 600", style: "normal" },
+    { path: "../../public/fonts/Gambetta/Gambetta-SemiboldItalic.woff", weight: " 600", style: "italic" },
+    { path: "../../public/fonts/Gambetta/Gambetta-Bold.woff", weight: " 700", style: "normal" },
+    { path: "../../public/fonts/Gambetta/Gambetta-BoldItalic.woff", weight: " 700", style: "italic" },
+  ],
+  variable: "--font-gambetta",
+  display: "swap"
+});
+const bespokeSerif = localFont({
+  src: [
+    {path: "../../public/fonts/BespokeSerif/BespokeSerif-Regular.woff", weight: "400", style: "normal"},
+    {path: "../../public/fonts/BespokeSerif/BespokeSerif-Medium.woff", weight: "500", style: "normal"},
+    {path: "../../public/fonts/BespokeSerif/BespokeSerif-Bold.woff", weight: "700", style: "normal"},
+    {path: "../../public/fonts/BespokeSerif/BespokeSerif-Extrabold.woff", weight: "900", style: "normal"},
+  ],
+  variable: "--font-bespoke-serif",
+  display: "swap"
+})
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -40,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${clashGrotesk.variable} ${tabular.variable} antialiased `} >
+      <body className={`  ${clashGrotesk.variable}${workSans.variable} ${dmMono.variable} ${gambetta.variable} ${bespokeSerif.variable} antialiased p-2 lg:p-6`} >
         {children}
       </body>
     </html>

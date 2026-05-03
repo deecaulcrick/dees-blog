@@ -51,7 +51,7 @@ export function TableOfContents() {
       </p>
       <ul className="space-y-1">
         {headings.map((h) => (
-          <li key={h.id} className={h.level === 3 ? "pl-4" : ""}>
+          <li key={h.id} className={h.level === 3 ? "pl-4" : ""}> 
             <a
               href={`#${h.id}`}
               onClick={(e) => {

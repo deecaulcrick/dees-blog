@@ -38,61 +38,41 @@ const singlePost = async (props: SinglePostProps) => {
 
     return (
         <>
-            {/* <div className=" header w-full">
-      </div> */}
+            <div className="w-full flex justify-center items-center">
+                <div >
+                    <div className="border-t-30 border-theme-green px-6 py-4 flex flex-col gap-6">
 
+                        <h1 className="mt-4 text-4xl md:text-6xl max-w-5xl font-sans font-bold lowercase">{postContent.data.title}</h1>
 
-            <div className="flex justify-center items-center">
-                <div className="flex flex-col md:flex-row gap-10 md:gap-20 px-8 md:px-16 py-16">
-                    <div className="w-full md:w-[20%] static ">
-
-                        <div className="hidden md:block sticky top-30">
-                            <TableOfContents />
-                        </div>
                     </div>
-                    <div className="w-full md:w-[80%]">
-                        {/* <div className="mb-4">
-                            <Link href='/' className="flex items-center gap-3">
-                                <MoveLeft strokeWidth={1} />
-                                <p className="font-mono text-sm">
-                                    BACK
-                                </p>
-                            </Link>
-                        </div> */}
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="bg-theme-blue p-1 rounded-sm">
-                                <Calendar color="black" size={20} />
-                            </div>
+                    <div className="flex gap-6 items-center border-y px-6 py-6">
+
+                        <div className="flex items-center gap-4 ">
+                            <Calendar size={20} />
 
                             <p className="font-bold text-sm">{postContent.data.date}</p>
                         </div>
-
-
-                        <h1 className="h1 lowercase font-sans font-bold tracking-tight">{postContent.data.title}</h1>
-                        <p className="text-xl font-sans mb-6">{postContent.data.excerpt}</p>
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="bg-theme-yellow p-1 rounded-sm">
-                                <Tag color="black" size={20} />
-                            </div>
+                        <div className="flex items-center gap-4">
+                            <Tag size={20} />
 
                             <p className="font-bold text-sm">{postContent.data.tag}</p>
                         </div>
-                        <Image src={postContent.data.coverImage} alt={postContent.data.title} caption={postContent.data.title} />
+                    </div>
+                    <div className="grid md:grid-cols-12 gap-10 md:gap-20 px-2 md:px-6 py-10 font-serif font-medium relative">
+                        <div className="md:col-span-3 sticky top-30">
 
-                        <BlogPost content={postContent.content} />
+                            <div className="hidden md:block sticky top-30">
+                                <TableOfContents />
+                            </div>
+                        </div>
+                        <div className="md:col-span-9 min-w-0">
+                        
+                            <BlogPost content={postContent.content} />
+                        </div>
                     </div>
 
                 </div>
             </div>
-
-
-            {/* <div className="post-info relative">
-                <div>
-                    <p className="post-date">{postContent.data.date}</p>
-                </div>
-
-
-            </div> */}
 
         </>
 

@@ -1,35 +1,46 @@
 import React from 'react'
 import DarkModeToggle from '@/components/ui/DarkModeToggle'
 import NavMenu from './NavMenu'
+import Logo from './logo/Logo'
 import Image from 'next/image'
 import SoundToggle from './ui/SoundToggle'
 import MobileMenu from './MobileMenu'
 import Link from 'next/link'
+import Github from './icons/Github'
 
 function Header() {
 
     return (
-
-        <div className='w-full container py-6 px-8 md:px-15 flex justify-between gap-10 items-center border border-dashed border-border bg-background fixed left-0 right-0 mx-auto z-99'>
-            <div className='w-full md:col-span-6 gap-4 items-center justify-between hidden md:flex'>
-                <Link href="/">
-                    <Image src="/images/glasses-icon.svg" alt="Logo" width={100} height={100} />
-                </Link>
-
-                <NavMenu />
-
-            </div>
-            <div className='md:hidden flex flex-row-reverse gap-1 items-center'>
-
-                <div><MobileMenu /></div>
-                <div className='font-sans font-black text-xl border-r border-border pr-6 text-zinc-900 dark:text-zinc-300'>
-                    <Link href="/">
-                        <Image src="/images/glasses-icon.svg" alt="Logo" width={50} height={50} />
+        <div className='font-serif'>
+            <div className='flex flex-col lg:flex-row gap-2 lg:gap-8 justify-between p-4 pb-6 border-b border-border items-end ' >
+                <div className='w-full flex flex-col lg:flex-row gap-4  lg:items-end justify-center b'>
+                    <Link href="/" className='w-fit flex items-center gap-2'>
+                        <Image src="/images/logo/logo.svg" alt="Logo" width={500} height={200} className='w-full lg:w-[320px]' />
                     </Link>
+
+                    <div className="md:mt-4  lg:mt-0 text-sm lg:text-base font-medium">
+                        Exploring AI and the future of technology, one post at a time.
+                    </div>
+                </div>
+                <div className='text-sm lg:text-base font-medium'>
+                    From <span className='font-extrabold underline'>deecaulcrick.com</span>
                 </div>
             </div>
-
+            <div className='flex flex-col lg:flex-row justify-between items-center '>
+                <div className='w-full border-b lg:border-none px-4 py-4'>
+                    <NavMenu />
+                </div>
+                <div className='flex w-full'>
+                    <div className='w-full px-4 py-4 flex items-center justify-center'>
+                        <Github />
+                    </div>
+                    <div className='w-full px-4 py-4 border-l border-border flex items-center justify-center '>
+                        <Github />
+                    </div>
+                </div>
+            </div>
         </div>
+
     )
 }
 
