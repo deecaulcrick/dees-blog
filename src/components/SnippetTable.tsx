@@ -7,7 +7,7 @@ function SnippetTable() {
 
     return (
         <div className="mt-20">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <table>
                     <thead>
                         <tr className="font-mono text-sm uppercase border-b border-zinc-300 dark:border-zinc-800 mb-4">
@@ -31,7 +31,7 @@ function SnippetTable() {
                     </tbody>
                 </table>
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden grid md:grid-cols-2 gap-6">
                 {postMetaData.map((post) => (
                     <div key={post.slug} className="rounded-sm hover:shadow-sm p-10 mb-6 border border-zinc-200 dark:border-zinc-800">
                         <h2 className="font-heading font-light text-2xl tracking-tighter mb-4 hover:underline hover:decoration-theme-pink">

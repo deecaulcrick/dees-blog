@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Card from '@/components/ui/Card'
+import Shelf from '@/components/drawings/Shelf'
 
 function page() {
     return (
@@ -29,29 +30,26 @@ function page() {
                         </div>
                     </Card>
                     {/* Location */}
-                    <Card className='md:col-span-2 row-span-2'>
-                        <Image src="/images/my-notion-face-portrait.png" alt="Dee Caulcrick"
-                            width={300}
-                            height={300}
-                        />
-                        <p className='text-center mt-4'>                        I’m from Lagos, Nigeria, roughly 8,481km away from your current location, according to your IP address.</p>
+                    <Card className='md:col-span-2 row-span-2 flex flex-col items-center'>
+                        <Shelf />
+                        <p className='text-center mt-4'>Here’s what I’m currently reading, watching and listening to.</p>
                     </Card>
                     {/* Fun fact */}
 
-                    <Card className='text-center'>
+                    <Card className='md:col-span-2 lg:col-span-1 text-center flex justify-center items-center'>
                         <p>
-                            Here’s what I’m currently reading, watching and listening to.
+                            I’ve lived in Lagos, Nigeria, all my life and would love to live abroad for the remainder of my twenties.
                         </p>
                     </Card>
                     {/* Name pronunciation? */}
-                    <Card className="text-center">
+                    <Card className="md:col-span-2 lg:col-span-1 text-center">
                         <h3 className='font-heading  text-3xl tracking-tight font-light mb-2'>caulcrick</h3>
-                        <p >My last name gets pronounced wrongly a lot. Click to hear a robot pronounce it.</p>
+                        <p>My last name gets pronounced wrongly a lot. Click to hear a robot pronounce it.</p>
 
                     </Card>
                     {/* fave books */}
 
-                    <Card>
+                    <Card className='md:col-span-2 lg:col-span-1'>
                         <Image src="/images/deeLondon.jpeg" alt="Dee Caulcrick"
                             width={300}
                             height={300}
@@ -60,7 +58,7 @@ function page() {
                         <p className='text-center text-sm'>Spent #Summer25 at Goldman Sachs in Birmingham, UK where I worked as a Software Engineer</p>
                     </Card>
                     {/* {stuff i've built} */}
-                    <Card className='md:row-span-2'>
+                    <Card className='md:col-span-2 lg:col-span-1 lg:row-span-2'>
                         <h3 className='font-heading text-3xl tracking-tight font-light mb-2'>Projects</h3>
                         <p>I enjoy building cool stuff including Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <p className='mt-4'> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>

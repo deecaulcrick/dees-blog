@@ -16,32 +16,23 @@ const NavMenu = () => {
         <NavigationMenu viewport={false}>
             <NavigationMenuList>
 
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/">Home </Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
 
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/snippets">Snippets </Link>
+                        <Link href="/snippets">snippets </Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/library">Library </Link>
+                        <Link href="/library">library </Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/about">About </Link>
+                        <Link href="/about">about </Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/about">About </Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
+            
             </NavigationMenuList>
         </NavigationMenu>
     )

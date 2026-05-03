@@ -20,7 +20,7 @@ export default async function Home() {
         <div className=" mt-20">
           <h3 className="font-mono uppercase text-zinc-500 dark:text-zinc-300">Currently Reading</h3>
           <hr className="my-6" />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             {books.filter((book) => book.status === "Reading").map((book) => (
               <div key={book.id} className="mb-10">
                 <Image src={book.cover ?? "/placeholder.jpg"} alt={book.title} width={100} height={150} className="w-full h-auto" />
@@ -38,7 +38,7 @@ export default async function Home() {
           <div className="bg-white dark:bg-transparent border border-dashed px-4 py-4">
             <p className="font-mono uppercase text-zinc-500 dark:text-zinc-300 text-sm">I have read a lot of books. I am obviously only including books that I recommend.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             {books.map((book) => (
               <div key={book.id} className="mb-10">
                 <Image src={book.cover ?? "/placeholder.jpg"} alt={book.title} width={100} height={150} className="w-full h-auto" />
