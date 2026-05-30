@@ -11,7 +11,7 @@ function HomepageHeader() {
             <div className='grid lg:grid-cols-12 gap-2 lg:gap-8 border-b border-border  lg:p-0 '>
                 <div className='w-full lg:col-span-10 flex flex-col gap-4  lg:flex-row lg:items-end lg:justify-center lg:border-r '>
                     <div className=' font-black tracking-tight w-full lg:w-[75%] lg:border-r h-full flex items-center justify-start lg:pr-4'>
-                        <Link href="/" className='w-full flex items-center lg:items-baseline'>
+                        <Link href="/" className='w-full flex items-center lg:items-baseline lg:mb-6'>
                             <Image src="/images/logo/logo.svg" alt="Logo" width={300} height={100} className='w-full' />
                         </Link>
                     </div>

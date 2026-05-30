@@ -12,8 +12,8 @@ function Header() {
 
     return (
         <div className='font-serif'>
-            <div className='flex flex-col lg:flex-row gap-2 lg:gap-8 justify-between p-4 pb-6 border-b border-border items-end ' >
-                <div className='w-full flex flex-col lg:flex-row gap-4  lg:items-end justify-center b'>
+            <div className='flex flex-col lg:flex-row gap-2 lg:gap-8 justify-between p-4 pb-6 border-b border-border lg:items-end' >
+                <div className='w-full flex flex-col lg:flex-row gap-4  lg:items-end '>
                     <Link href="/" className='w-fit flex items-center gap-2'>
                         <Image src="/images/logo/logo.svg" alt="Logo" width={500} height={200} className='w-full lg:w-[320px]' />
                     </Link>
