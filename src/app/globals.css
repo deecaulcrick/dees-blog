@@ -132,8 +132,8 @@
   @apply text-base mb-4;
 } */
 ::selection{
-  background: var(--color-theme-pink);
-  color: #081322;
+  background: var(--color-theme-blue);
+  color: var(--background);
 }
 
 .header{

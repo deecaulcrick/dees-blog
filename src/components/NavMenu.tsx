@@ -12,7 +12,7 @@ const NavMenu = () => {
                 <Link href="/posts" className='hover:underline transition-colors duration-300'>
                     Articles
                 </Link>
-                <Link href="/about" className='hover:underline transition-colors duration-300'>
+                <Link href="/links" className='hover:underline transition-colors duration-300'>
                     Links
                 </Link>
                 <Link href="/snippets" className='hover:underline transition-colors duration-300'>
