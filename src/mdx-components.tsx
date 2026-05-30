@@ -53,13 +53,13 @@ export const mdxComponents = {
   h3: ({ children, ...props }) => (
     <h3
       {...props}
-      className="font-serif text-2xl px-1 md:px-8 font-bold mb-3 mt-6 text-foreground"
+      className="font-serif text-xl md:text-2xl px-1 md:px-8 font-bold mb-3 mt-6 text-foreground"
     >
       {children}
     </h3>
   ),
   p: ({ children }) => (
-    <p className=" mb-4 px-1 md:px-8 leading-10 text-foreground text-xl">
+    <p className=" mb-4 px-1 md:px-8 leading-10 text-foreground text-lg md:text-xl">
       {children}
     </p>
   ),
@@ -78,10 +78,10 @@ export const mdxComponents = {
     <Blockquote {...props}>{children}</Blockquote>
   ),
   ul: ({ children }) => (
-    <ul className="list-disc list-inside mb-4 space-y-2 ml-8 text-xl">{children}</ul>
+    <ul className="list-disc list-inside mb-4 space-y-2 ml-4 lg:ml-8 text-lg md:text-xl">{children}</ul>
   ),
   ol: ({ children }) => (
-    <ol className="list-decimal list-inside mb-4 space-y-2 ml-8 text-xl">
+    <ol className="list-decimal list-inside mb-4 space-y-2 ml-4 lg:ml-8 text-lg md:text-xl">
       {children}
     </ol>
   ),
@@ -91,7 +91,7 @@ export const mdxComponents = {
   a: ({ href, children }) => (
     <a
       href={href}
-      className="underline decoration-theme-pink hover:bg-theme-green hover:text-black transition-colors"
+      className="underline decoration-theme-green hover:bg-theme-green hover:text-black transition-colors"
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
     >

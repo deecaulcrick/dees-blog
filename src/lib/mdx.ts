@@ -42,7 +42,10 @@ export const getSnippetMetaData = () => {
             title: matterResult.data.title,
             date: matterResult.data.date,
             description: matterResult.data.description,
+            excerpt: matterResult.data.description || '',
+            tag: matterResult.data.tag || matterResult.data.category || '',
             category: matterResult.data.category,
+            coverImage: matterResult.data.coverImage || '',
             slug: filename.replace('.mdx', ''),
         }
     })

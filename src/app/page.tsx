@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HomepageHeader from "@/components/HomepageHeader";
 import { HighlightedText } from "@/components/HighlightedText";
+import { getPostMetaData } from "@/lib/mdx";
 
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <PostList />
+        <PostList getMetaData={getPostMetaData} limit={3} />
 
 
       </div>
