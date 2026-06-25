@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Card from '@/components/ui/Card'
-import Shelf from '@/components/drawings/Shelf'
 import Timeline from '@/components/Timeline'
 
 // TODO: replace with your real work history
@@ -52,16 +50,16 @@ function page() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-22">
                             <div className="order-2 md:order-1">
                                 <p className='text-lg md:text-xl'>
-                                    It's hard to give myself a title because not only do I think it's hard to describe what I do but titles are very boxy. I have a lot of interests. Most of my work sits under the umbrellas of design, engineering, R&D, and systems thinking. 
+                                    It&apos;s hard to give myself a title because not only do I think it&apos;s hard to describe what I do but titles are very boxy. I have a lot of interests. Most of my work sits under the umbrellas of design, engineering, R&D, and systems thinking. 
                                     <br/>
                                     <br/>
-                                    I've recently been doing a lot of reading and technical writing in a bid to learn and express myself more.
+                                    I&apos;ve recently been doing a lot of reading and technical writing in a bid to learn and express myself more.
                                     <br/>
                                     <br/>
                                     I currently work at Mainhedge Research where I explore finance, payments & cryptography.
                                     <br/>
                                     <br/>
-                                    Here's what I've been up to in the past year:
+                                    Here&apos;s what I&apos;ve been up to in the past year:
                                 </p>
                                 <div className="mt-6">
                                      <Timeline items={timelineItems} />

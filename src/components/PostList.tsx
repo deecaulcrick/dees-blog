@@ -1,17 +1,7 @@
 import Link from "next/link";
 import Image from 'next/image';
-import { Cpu, Feather, Network, Zap, Code2, LucideIcon } from 'lucide-react'
 import { relativeTime } from "@/utils/relativeTime";
 
-const CATEGORY_CONFIG: Record<string, { icon: LucideIcon; bg: string; iconColor: string }> = {
-    "computer-science": { icon: Cpu, bg: "bg-theme-blue", iconColor: "text-black" },
-    "essays": { icon: Feather, bg: "bg-theme-purple ", iconColor: "text-white" },
-    "networking": { icon: Network, bg: "bg-theme-green ", iconColor: "text-black" },
-    "productivity": { icon: Zap, bg: "bg-theme-yellow ", iconColor: "text-white " },
-    "web-development": { icon: Code2, bg: "bg-theme-orange ", iconColor: "text-white " },
-}
-
-const DEFAULT_CONFIG = CATEGORY_CONFIG["web-development"]
 
 export interface PostData {
     title: string;
@@ -43,8 +33,6 @@ function PostList({ getMetaData, limit, basePath = "/posts" }: PostListProps) {
     return (
         <div className="">
             {postMetaData.map((post) => {
-                const config = CATEGORY_CONFIG[post.category] ?? DEFAULT_CONFIG
-                const CategoryIcon = config.icon
                 return (
                     <div key={post.slug} className="group bg-background/80 shadow-xs border border-border rounded-lg mb-6 break-inside-avoid hover:scale-102 transition-all duration-300 ease-in-out">
                         <div className="">

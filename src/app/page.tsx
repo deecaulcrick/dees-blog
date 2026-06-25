@@ -1,7 +1,5 @@
 import PostList from "@/components/PostList";
-import Link from "next/link";
 import Image from "next/image";
-import { HighlightedText } from "@/components/HighlightedText";
 import { getPostMetaData } from "@/lib/mdx";
 import { getBooks } from "@/lib/notion";
 import TitleLink from "@/components/ui/TitleLink";
