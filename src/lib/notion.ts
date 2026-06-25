@@ -12,7 +12,9 @@ export interface Book {
     status?: string;
     rating?: number;
     cover?: string;
-    // Add other properties from your database
+    url?: string;
+    date_finished?: string;
+    genre?: string[];
 }
 
 export async function getBooks(): Promise<Book[]> {
@@ -25,7 +27,6 @@ export async function getBooks(): Promise<Book[]> {
             },
         ],
     });
-    console.log(response.results);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return response.results.map((page: any) => {
@@ -38,7 +39,7 @@ export async function getBooks(): Promise<Book[]> {
             status: props.Status?.status?.name || '',
             rating: props.Rating?.number || 0,
             url: props.URL?.url || '',
-            cover: props.Cover?.files[0]?.external?.url || '',
+            cover: props.Cover?.files[0]?.file?.url || props.Cover?.files[0]?.external?.url || '',
             date_finished: props.Date?.date?.start || '',
             genre: props.Genre?.multi_select.map((tag: { name: string }) => tag.name) || [],
             // Map other properties as needed

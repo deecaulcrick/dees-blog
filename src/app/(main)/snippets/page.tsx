@@ -1,5 +1,5 @@
 import PostList from "@/components/PostList";
-import { getPostMetaData, getSnippetMetaData } from "@/lib/mdx";
+import {  getSnippetMetaData } from "@/lib/mdx";
 
 
 export default function Home() {

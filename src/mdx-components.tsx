@@ -53,13 +53,13 @@ export const mdxComponents = {
   h3: ({ children, ...props }) => (
     <h3
       {...props}
-      className="font-serif text-xl md:text-2xl px-1 md:px-8 font-bold mb-3 mt-6 text-foreground"
+      className=" text-xl md:text-2xl px-1 md:px-8 font-medium mb-3 mt-6 text-foreground"
     >
       {children}
     </h3>
   ),
   p: ({ children }) => (
-    <p className=" mb-4 px-1 md:px-8 leading-10 text-foreground text-lg md:text-xl">
+    <p className=" font-normal tracking-tight mb-4 px-1 md:px-8 leading-8 md:leading-10 text-foreground text-xl md:text-2xl">
       {children}
     </p>
   ),
@@ -78,10 +78,10 @@ export const mdxComponents = {
     <Blockquote {...props}>{children}</Blockquote>
   ),
   ul: ({ children }) => (
-    <ul className="list-disc list-inside mb-4 space-y-2 ml-4 lg:ml-8 text-lg md:text-xl">{children}</ul>
+    <ul className="list-disc list-inside marker:text-theme-green mb-4 space-y-2 ml-4 md:ml-8 text-lg md:text-xl font-sans">{children}</ul>
   ),
   ol: ({ children }) => (
-    <ol className="list-decimal list-inside mb-4 space-y-2 ml-4 lg:ml-8 text-lg md:text-xl">
+    <ol className="list-decimal list-inside mb-4 space-y-2 ml-4 md:ml-8 text-lg md:text-xl font-sans">
       {children}
     </ol>
   ),

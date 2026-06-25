@@ -1,6 +1,7 @@
 // Remove 'use client' - this should be a Server Component
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { mdxComponents } from '@/mdx-components'
+import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import { rehypeCodeFilename } from '@/lib/rehypeCodeFilename'
 
@@ -16,7 +17,7 @@ async function BlogPost({ content }: BlogPostProps) {
     options: {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [],
+        remarkPlugins: [remarkGfm],
         rehypePlugins: [
           rehypeSlug,
           rehypeCodeFilename,

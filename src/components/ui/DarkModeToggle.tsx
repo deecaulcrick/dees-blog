@@ -13,6 +13,7 @@ export default function DarkModeToggle() {
                 // playClick();
                 setTheme(theme === "dark" ? "light" : "dark");
             }}
+            aria-label="Toggle dark mode"
             className=" dark:text-white"
         >
             {theme === "dark" ? (<Moon />) : (<Sun />)}

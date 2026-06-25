@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from 'next/image';
 import { Cpu, Feather, Network, Zap, Code2, LucideIcon } from 'lucide-react'
+import { relativeTime } from "@/utils/relativeTime";
 
 const CATEGORY_CONFIG: Record<string, { icon: LucideIcon; bg: string; iconColor: string }> = {
     "computer-science": { icon: Cpu, bg: "bg-theme-blue", iconColor: "text-black" },
@@ -45,37 +46,40 @@ function PostList({ getMetaData, limit, basePath = "/posts" }: PostListProps) {
                 const config = CATEGORY_CONFIG[post.category] ?? DEFAULT_CONFIG
                 const CategoryIcon = config.icon
                 return (
-                    <div key={post.slug} className="grid md:grid-cols-12 font-serif border-b border-border">
-                        <div className="hidden md:col-span-3 md:flex flex-col  justify-center gap-4 md:border-r md:border-border p-12">
-                            <p className="italic"><b><i>Last updated: </i></b>{post.date}</p>
+                    <div key={post.slug} className="group bg-background/80 shadow-xs border border-border rounded-lg mb-6 break-inside-avoid hover:scale-102 transition-all duration-300 ease-in-out">
+                        <div className="">
                             {post.coverImage && (
-                                <Image src={post.coverImage} alt={post.title} width={600} height={400} className=" mb-6 w-full" />
+                                <Image src={post.coverImage} alt={post.title} width={600} height={400} className="rounded-t-lg mb-6 w-full" />
                             )}
-                        </div>
-                        <div className="md:col-span-9 flex flex-col gap-6 p-4 py-12 md:p-20">
 
-                            <h2 className="font-bold text-2xl md:text-4xl tracking-tight">
-                                <Link href={`${basePath}/${post.slug}`} className="hover:underline hover:decoration-theme-pink">
+
+                        </div>
+                        <div className="p-4">
+
+                            <h2 className="font-bold text-xl md:text-2xl tracking-tight">
+                                <Link href={`${basePath}/${post.slug}`} className=" group-hover:text-theme-pink tracking-tight transition-colors duration-300 ease-in-out">
                                     {post.title}
                                 </Link>
 
                             </h2>
 
 
-                            <p className="font-medium text-base md:text-lg">{truncateExcerpt(post.excerpt, 150)}</p>
-                            <div className="md:hidden flex items-center gap-2 border w-fit p-2">
-
-                                <p className="font-sans uppercase font-bold text-sm">{post.tag}</p>
-                            </div>
-                            <p className="md:hidden italic">Last updated: {" "}{post.date}</p>
-                            <div className="hidden md:flex items-center gap-2 ">
-                                <div className={`${config.bg} p-1 rounded-sm`}>
-                                    <CategoryIcon className={config.iconColor} size={20} />
+                            <p className="font-normal text-base mt-4 tracking-tight">{truncateExcerpt(post.excerpt, 100)}</p>
+                            <div className="flex items-center justify-between mt-4 text-sm text-neutral-700 dark:text-neutral-400">
+                                <div>
+                                    {post.tag && (
+                                        <span className="inline-block">
+                                            {post.tag}
+                                        </span>
+                                    )}
                                 </div>
-
-                                <p className="font-medium text-sm">{post.tag}</p>
+                                <div>
+                                    {relativeTime(post.date)}
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
                 )
             })}

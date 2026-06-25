@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Work_Sans, DM_Mono, Merriweather } from "next/font/google";
+import { DM_Mono, Lato, Newsreader } from "next/font/google";
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-const clashGrotesk = localFont({
-  src: [
-    { path: "../../public/fonts/ClashGrotesk/ClashGrotesk-Bold.woff", weight: "700", style: "normal" },
-    { path: "../../public/fonts/ClashGrotesk/ClashGrotesk-Semibold.woff", weight: "600", style: "normal" },
-    { path: "../../public/fonts/ClashGrotesk/ClashGrotesk-Medium.woff", weight: "500", style: "normal" },
-    { path: "../../public/fonts/ClashGrotesk/ClashGrotesk-Regular.woff", weight: "400", style: "normal" },
-    { path: "../../public/fonts/ClashGrotesk/ClashGrotesk-Light.woff", weight: "300", style: "normal", },
-    { path: "../../public/fonts/ClashGrotesk/ClashGrotesk-Variable.woff", weight: "100 900", style: "normal" }
-
-  ],
-  variable: "--font-clash-grotesk",
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: "400",
+  style: "normal",
   display: "swap"
 });
-const workSans = Work_Sans({
+
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-work-sans",
+  variable: "--font-newsreader",
 });
+
 const dmMono = DM_Mono({
   subsets: ["latin"],
   variable: "--font-dm-mono",
@@ -27,13 +25,7 @@ const dmMono = DM_Mono({
   style: "normal",
   display: "swap"
 });
-const merriwether = Merriweather({
-  subsets: ["latin"],
-  variable: "--font-merriweather",
-  weight:[ "400", "500", "700", "800", "900"],
-  style: "normal",
-  display: "swap"
-});
+
 
 const gambetta = localFont({
   src: [
@@ -73,8 +65,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`  ${clashGrotesk.variable}${workSans.variable} ${dmMono.variable} ${gambetta.variable} ${bespokeSerif.variable} antialiased p-2 lg:p-6`} >
-        {children}
+      <body className={`  ${lato.variable} ${newsreader.variable}${dmMono.variable} ${gambetta.variable} ${bespokeSerif.variable} antialiased `} >
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <div>
+            <Header />
+          </div>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

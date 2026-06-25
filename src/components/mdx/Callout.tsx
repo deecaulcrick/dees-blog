@@ -66,18 +66,17 @@ export function Callout({
   const body = children ?? text;
 
   return (
-    <div className={`my-6 border-l-3 px-4 py-2 rounded-r-lg ${border} ${bg}`}>
-      <div className={`flex items-center gap-2 mb-1 ${iconColor}`}>
-          {icon}
-      
+    <div className={`shadow-xs my-6 border border-border p-6 rounded-r-lg ${border} ${bg}`}>
+      <div className={` mb-1 ${iconColor}`}>
+       
 
         {label && (
-          <span className="font-sans font-bold text-xl lowercase tracking-wide">
+          <span className="font-sans font-bold text-xs uppercase tracking-tight">
             {label}
           </span>
         )}
       </div>
-      <div className="text-foreground font-medium text-xl leading-relaxed">{body}</div>
+      <div className="mt-2 text-foreground font-medium text-xl leading-relaxed">{body}</div>
     </div>
   );
 }

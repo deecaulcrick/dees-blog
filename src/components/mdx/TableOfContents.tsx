@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface Heading {
   id: string;
@@ -11,6 +13,7 @@ interface Heading {
 export function TableOfContents() {
   const [headings, setHeadings] = useState<Heading[]>([]);
   const [activeId, setActiveId] = useState<string>("");
+  const [open, setOpen] = useState(true);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -45,31 +48,41 @@ export function TableOfContents() {
   if (headings.length === 0) return null;
 
   return (
-    <nav aria-label="Table of contents" className="my-6 ">
-      <p className="text-xl lowercase tracking-tight mb-3 font-bold">
-        Contents
-      </p>
-      <ul className="space-y-1">
-        {headings.map((h) => (
-          <li key={h.id} className={h.level === 3 ? "pl-4" : ""}> 
-            <a
-              href={`#${h.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById(h.id)?.scrollIntoView({ behavior: "smooth" });
-                setActiveId(h.id);
-              }}
-              className={`block text-lg py-0.5 transition-colors ${
-                activeId === h.id
-                  ? "text-[var(--blue)] font-medium"
-                  : "text-foreground hover:text-foreground"
-              }`}
-            >
-              {h.text}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <nav aria-label="Table of contents" className=" ">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center gap-2 border-b border-border py-3 text-left"
+      >
+        <ChevronRight
+          className={cn("size-4 shrink-0 text-theme-dark-pink transition-transform", open && "rotate-90")}
+        />
+        <span className="font-sans font-bold hover:text-theme-dark-pink">Table of Contents</span>
+      </button>
+      {open && (
+        <ul className="font-sans space-y-1 border-b border-border py-3">
+          {headings.map((h) => (
+            <li key={h.id} className={h.level === 3 ? "pl-8" : "pl-4"}>
+              <a
+                href={`#${h.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(h.id)?.scrollIntoView({ behavior: "smooth" });
+                  setActiveId(h.id);
+                }}
+                className={cn(
+                  "block py-1.5 text-base transition-colors",
+                  activeId === h.id
+                    ? "text-[var(--blue)] font-medium"
+                    : "text-foreground/80 hover:text-foreground"
+                )}
+              >
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }

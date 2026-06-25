@@ -11,6 +11,11 @@ const nextConfig = {
     remotePatterns: [
       new URL("https://i.pinimg.com/**"),
       new URL("https://images-na.ssl-images-amazon.com/**"),
+      {
+        protocol: "https" as const,
+        hostname: "prod-files-secure.s3.us-west-2.amazonaws.com",
+        pathname: "/**",
+      },
     ]
   }
 }

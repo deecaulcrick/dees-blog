@@ -1,7 +1,8 @@
 
 import { getBooks } from "@/lib/notion";
-import Image from "next/image";
+import Book from "@/components/Book";
 
+export const revalidate = 1800;
 
 export default async function Home() {
   const books = await getBooks();
@@ -22,11 +23,7 @@ export default async function Home() {
           <hr className="my-6" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             {books.filter((book) => book.status === "Reading").map((book) => (
-              <div key={book.id} className="mb-10">
-                <Image src={book.cover ?? "/placeholder.jpg"} alt={book.title} width={100} height={150} className="w-full h-auto" />
-                <h2 className="font-heading text-2xl tracking-tight mt-4 hover:underline hover:decoration-theme-pink">{book.title}</h2>
-                <p>{book.author}</p>
-              </div>
+              <Book key={book.id} book={book} />
             ))}
           </div>
         </div>
@@ -40,11 +37,7 @@ export default async function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             {books.map((book) => (
-              <div key={book.id} className="mb-10">
-                <Image src={book.cover ?? "/placeholder.jpg"} alt={book.title} width={100} height={150} className="w-full h-auto" />
-                <h2 className="font-heading text-2xl tracking-tight mt-4 hover:underline hover:decoration-theme-pink">{book.title}</h2>
-                <p>{book.author}</p>
-              </div>
+              <Book key={book.id} book={book} />
             ))}
           </div>
         </div>
